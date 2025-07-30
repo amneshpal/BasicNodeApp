@@ -1,0 +1,102 @@
+1. Register User (No Authentication)
+Method: POST
+
+URL: http://localhost:3000/api/register
+
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "username": "johnDoe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+2. Login User (No Authentication)
+Method: POST
+
+URL: http://localhost:3000/api/login
+
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+Response: You'll get a token like:
+
+json
+Copy
+Edit
+{
+  "token": "your_jwt_token_here"
+}
+3. Forget Password (No Authentication)
+Method: POST
+
+URL: http://localhost:3000/api/forgetPassword
+
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "email": "john.doe@example.com"
+}
+4. Protected Routes (Require Token)
+For these routes, add a Bearer token in the Authorization tab of Postman:
+
+Authorization: Type: Bearer Token → Paste the token from login response.
+
+Logout
+Method: POST
+
+URL: http://localhost:3000/api/logout
+
+Delete User
+Method: POST
+
+URL: http://localhost:3000/api/delete
+
+Soft Delete User
+Method: POST
+
+URL: http://localhost:3000/api/softdelete
+
+Recover Soft Deleted User
+Method: POST
+
+URL: http://localhost:3000/api/recoversoftdelete
+
+Update Password
+Method: POST
+
+URL: http://localhost:3000/api/updatePassword
+
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "oldPassword": "password123",
+  "newPassword": "newPassword456"
+}
+Reset Password
+Method: POST
+
+URL: http://localhost:3000/api/resetPassword
+
+Body (JSON):
+
+json
+Copy
+Edit
+{
+  "newPassword": "newPassword456"
+}
