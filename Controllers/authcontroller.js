@@ -56,7 +56,6 @@ const authController = {
             res.status(201).json({
                 message: 'User registered successfully!',
                 user: newUser,
-
                 token,
             });
 
@@ -70,5 +69,13 @@ const authController = {
         }
     },
 };
+
+
+
+
+
+
+
+
 
 module.exports = authController;
