@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authController = require('../Controllers/authcontroller');  // Correct import
-const{verifyToken} = require('../Middleware/verifytoken');  // Correct import
+// const verifyToken = require('../Middleware/verifytoken'); // Correct import
   // Import the middleware
 
 router.post('/register', authController.register);  // Registration does not require authentication
