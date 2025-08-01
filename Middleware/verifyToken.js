@@ -18,4 +18,4 @@ jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
 });
 };
 
-module.exports = { verifyToken };
+module.exports = verifyToken;
