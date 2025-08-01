@@ -45,6 +45,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());  // To parse JSON bodies
 
+app.get('/',(req, res)=>{
+  res.send('Welcome to the Novartis Backend API');
+})
 // Routes
 app.use('/api', authRouter);
 
@@ -68,5 +71,4 @@ const start = async () => {
     console.error('Error starting server:', error);
   }
 };
-
 start();
