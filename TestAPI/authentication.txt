@@ -5,12 +5,11 @@ URL: http://localhost:3000/api/register
 
 Body (JSON):
 
-{"name":"amnesh",
-  "username": "adminUser",
-  "email": "admi@example.com",
+{"name":"Abhinesha1",
+  "username": "Abhinesh1a",
+  "email": "Abhinesha1@example.com",
   "password": "adminpassword123",
-  "phone": "0987654321",
-  "role": "user"
+  "phone": "0987654321"
 }
 
 
@@ -23,9 +22,10 @@ URL: http://localhost:3000/api/login
 Body (JSON):
 
 {
-  "email": "john.doe@example.com",
-  "password": "password123"
+  "email": "Abhinesha1@example.com",
+  "password": "adminpassword123"
 }
+
 Response: You'll get a token like:
 
 {

@@ -1,0 +1,6 @@
+mysql -h mysql-b290c8d-amneshpal15-1022.h.aivencloud.com -P 10891 -u avnadmin -p
+
+USE defaultdb;
+SHOW TABLES;
+SELECT * FROM User;
+SELECT * FROM Users;

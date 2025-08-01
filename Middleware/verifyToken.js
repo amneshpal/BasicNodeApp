@@ -9,15 +9,13 @@ const verifyToken = (req, res, next) => {
   }
 
   // Verify the token using your secret key (replace 'yourSecretKey' with your actual secret)
-  jwt.verify(token, 'yourSecretKey', (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ message: 'Invalid or expired token.' });
-    }
-    
-    // Store the decoded user info (or any necessary data) in request for later use
-    req.user = decoded; // This will include the user data encoded in the JWT
-    next(); // Proceed to the next middleware/route handler
-  });
+jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
+  if (err) {
+    return res.status(401).json({ message: 'Invalid or expired token.' });
+  }
+  req.user = decoded;
+  next();
+});
 };
 
 module.exports = { verifyToken };
